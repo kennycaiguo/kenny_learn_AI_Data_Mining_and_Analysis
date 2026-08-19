@@ -1,0 +1,14 @@
+cols_num
+
+['Booking_ID',
+ 'no_of_adults',
+ 'no_of_weekend_nights',
+ 'no_of_week_nights',
+ 'type_of_meal_plan',
+ 'room_type_reserved',
+ 'lead_time',
+ 'arrival_month',
+ 'room_type_reserved.1',
+ 'avg_price_per_room']
+
+这个hotel-reservation-xgboost项目太复杂，我们自己来整理数据，自己来做模型训练和预测，自己类型xgboost
