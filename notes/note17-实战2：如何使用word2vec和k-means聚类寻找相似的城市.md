@@ -170,6 +170,8 @@ if __name__=="__main__":
     print(end-start)
 ```
 
+
+
 ![点击并拖拽以移动](https://res.hc-cdn.com/ecology/7.11.215/v2_resources/images/global-editor/image_error.png)
 
 经过上面的步骤，我们就训练好了 **K-means** 模型，当然，经过反复尝试，最终确定的不是 2000 这个簇数量，而是使用了 100 个簇的结果。我们尝试了 50、100、200、500、1000、2000 等多个聚类的结果，经过我们最后的对比评估，100 个簇的时候效果较好，于是我们最终选择了这个模型。
@@ -190,5 +192,49 @@ if __name__=="__main__":
 
 在数据缺少标注的时候，聚类算法是十分常用的，它可以帮助我们了解数据情况。当然，聚类方法也存在一些局限，还需要在日常的工作中多加练习，不断积累自己的经验。
 
+# 这个案例的数据搞不到，根本无法学习。我们还是学习下面的文本聚类吧
 
 
+
+# 扩展：下载gensim训练数据
+
+你可以通过 Python 代码或命令行直接下载 Gensim 内置的训练数据集和预训练模型。最常用的测试语料如 `text8` 或 `glove-wiki-gigaword-100`，默认会自动保存在电脑的 `~/gensim-data` 目录中。 [[1](https://github.com/piskvorky/gensim-data), [2](https://radimrehurek.com/gensim/auto_examples/howtos/run_downloader_api.html)]
+
+命令行下载
+
+在终端中运行以下命令来下载指定的数据集（例如 `text8`）： [[1](https://radimrehurek.com/gensim/downloader.html)]
+
+- `python -m gensim.downloader --download text8`
+
+Python 代码下载
+
+在你的 Python 脚本中导入 `gensim.downloader` 模块加载或下载数据： [[1](https://radimrehurek.com/gensim/auto_examples/howtos/run_downloader_api.html)]
+
+python
+
+```
+import gensim.downloader as api
+
+# 自动下载并加载数据
+dataset = api.load("text8")
+```
+
+# 扩展1，gensim 数据下载
+
+## https://sourceforge.net/projects/gensim-data.mirror/files/
+
+
+
+# 扩展2，这里有一个对旅游游记文本进行聚类的GitHub仓库
+
+## https://github.com/Edward1Chou/textClustering
+
+
+
+# 扩展3： 文本聚类（Kmeans、DBSCAN、LDA、Single-pass）
+
+## https://github.com/murray-z/text_clustering/tree/master
+
+# 扩展4 ：Learn how to process, classify, cluster, summarize, understand syntax, semantics and sentiment of text data with the power of Python!
+
+## https://github.com/dipanjanS/text-analytics-with-python
